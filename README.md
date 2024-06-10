@@ -45,6 +45,7 @@ Anime enthusiasts face challenges in finding a centralized platform to connect w
 - Forums
 - Anime and Manga Database
 - Search and Discovery
+- Login/Register
 
 ### Mockups
 
@@ -64,9 +65,13 @@ Anime enthusiasts face challenges in finding a centralized platform to connect w
 
 [Anime and Manga Database Mockup](anime-database.png)
 
-#### Search and Discovery
+#### Create Account Mockup
 
-[Search and Discovery Mockup](search-discovery.png)
+[Create Account Mockup](create-account-mockup.png)
+
+### Login Mockup
+
+[Login Mockup](login.png)
 
 ### Data
 
