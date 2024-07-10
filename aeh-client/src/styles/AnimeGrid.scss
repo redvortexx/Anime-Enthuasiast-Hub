@@ -1,0 +1,127 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.anime-grid {
+  padding: 20px;
+}
+
+.slick-slider {
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+  }
+  .slick-slide {
+    padding: 0 0.625rem;
+  }
+}
+
+.season-section {
+  margin-bottom: 2.5rem;
+
+  .season-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    padding: 0.625rem;
+    border: 2px solid #ddd;
+    border-radius: 0.5rem;
+    background-color: purple;
+    backdrop-filter: blur(0.3125rem);
+  }
+}
+
+.anime-card {
+  text-align: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .anime-image {
+    border-radius: 0.625rem;
+  }
+
+  .anime-title {
+    padding: 0.625rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff0042;
+  }
+
+  .anime-rating {
+    font-size: 0.875rem;
+    color: #ff0042;
+  }
+  .anime-card-content {
+    background-color: navajowhite;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-radius: 0.625rem;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  max-width: 50rem;
+  width: 80%;
+  height: auto;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    margin-bottom: 0.625rem;
+    text-align: center;
+  }
+
+  a {
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+  }
+
+  button {
+    padding: 0.625rem 1.25rem;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
