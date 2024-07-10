@@ -35,6 +35,18 @@ router.get("/anime", async (req, res) => {
   }
 });
 
+router.get("/anime/images", async (req, res) => {
+  try {
+    const animeImages = await knex("anime")
+      .select("image_url")
+      .whereNotNull("image_url");
+    res.json(animeImages);
+  } catch (error) {
+    console.error("Error fetching anime images:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 router.get("/manga", async (req, res) => {
   try {
     const mangaList = await knex("manga").select("*").orderBy("id", "desc");
@@ -62,4 +74,21 @@ router.get("/anime/search", async (req, res) => {
   }
 });
 
+router.get("/top/characters", async (req, res) => {
+  try {
+    const response = await axios.get("https://api.jikan.moe/v4/top/characters");
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: "Error fetching top characters" });
+  }
+});
+
+router.get("/watch/episodes", async (req, res) => {
+  try {
+    const response = await axios.get("https://api.jikan.moe/v4/watch/episodes");
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: "Error fetching recent episodes" });
+  }
+});
 module.exports = router;
