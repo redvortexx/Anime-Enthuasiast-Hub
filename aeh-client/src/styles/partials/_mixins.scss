@@ -1,0 +1,15 @@
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1280px;
+
+@mixin breakpointMin($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin breakpointMax($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
