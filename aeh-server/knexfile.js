@@ -1,11 +1,8 @@
-// Update with your config settings.
-
 require("dotenv").config();
 
 /**
  * @type { import("knex").Knex.Config }
  */
-
 module.exports = {
   development: {
     client: "pg",
@@ -15,7 +12,7 @@ module.exports = {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
       ssl: {
-        rejectUnauthorized: false, // Adjust based on your SSL configuration
+        rejectUnauthorized: false,
       },
     },
     migrations: {
